@@ -18,12 +18,21 @@ export class App extends Component {
 		return(
 			<div>
 				<h1>PeerGrader</h1>
-				<h2>Projects:</h2>
-				{this.renderProjects()}
-				<h2>Your favorites:</h2>
-				<div>Your faves</div>
-				<h2>Overall most voted</h2>
-				<div>Most voted</div>
+				<div className="row">
+					<div className="col-xs-8 col-md-8">
+						<h2>Projects:</h2>
+						{this.renderProjects()}
+					</div>
+					<div className="col-xs-4 col-md-4">
+						<h2>Overall most voted</h2>
+						<div>Most voted</div>
+						<h2>Your favorites:</h2>
+						<div>Your faves</div>
+					</div>
+
+				</div>
+
+
 			</div>
 			);
 	}
