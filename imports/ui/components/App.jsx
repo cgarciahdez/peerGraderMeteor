@@ -10,7 +10,7 @@ export class App extends Component {
 
 	renderProjects() {
 		return this.props.projects.map( (project,i) => {
-			return <Project key= {project.name} project={project}> </Project>;
+			return <Project key= {i} project={project}> </Project>;
 		});
 	}
 

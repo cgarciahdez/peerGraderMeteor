@@ -9,8 +9,12 @@ export default class Project extends Component {
 
 		return (
 			<div>
-				<div>{this.props.project.name}</div>
+				<div>{this.props.project.Nombres}</div>
+				<div>{this.props.project.Apellidos}</div>
+				<a href={this.props.project["Repositorio de github"]}>{this.props.project["Repositorio de github"]}</a>
+				<hr/>
 			</div>
+
 		);
 	}
 }
