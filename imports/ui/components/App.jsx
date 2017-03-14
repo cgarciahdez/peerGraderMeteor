@@ -4,11 +4,12 @@ import {createContainer} from "meteor/react-meteor-data";
 
 import Project from "./Project.jsx";
 
+import {Projects} from "../../api/Projects.js";
 
 export class App extends Component {
 
 	renderProjects() {
-		return this.props.projects.map( (project) => {
+		return this.props.projects.map( (project,i) => {
 			return <Project key= {project.name} project={project}> </Project>;
 		});
 	}
@@ -35,14 +36,8 @@ App.propTypes = {
 
 
 export default AppContainer = createContainer(()=>{
+	let projects = Projects.find({});
 	return {
-		projects:[
-			{name: "Project 1"},
-			{name: "Project 2"},
-			{name: "Project 3"},
-			{name: "Project 4"},
-			{name: "Project 5"},
-			{name: "Project 6"},
-		]
+		projects:projects.fetch()
 	};
 }, App);
