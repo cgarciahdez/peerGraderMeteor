@@ -36,7 +36,7 @@ App.propTypes = {
 
 
 export default AppContainer = createContainer(()=>{
-	let projects = Projects.find({});
+	let projects = Projects.find({Proyecto: "Project 2"});
 	return {
 		projects:projects.fetch()
 	};
